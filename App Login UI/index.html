@@ -10,50 +10,52 @@
 </head>
 <body>
     <div class="container">
-        <div class="header-container">
-            <h1 class="header">Login</h1>
-        </div>
-
-        <div class="form">
-            <label class="form-input">
-                <span class="floatingLabel">Email</span>
-
-                <div class="input-container">
-                    <i class="fa-solid fa-envelope"></i>
-                    <input type="email" placeholder="email@gmail.com"/>
-                </div>
-
-            </label>
-            <label class="form-input">
-                <span class="floatingLabel">Password</span>
-                <div class="input-container">
-                    <i class="fa-solid fa-lock"></i>
-                    <input type="password" placeholder="Enter your password"/>
-                    <i class="fa-solid fa-eye-slash" style="cursor: pointer"></i>
-                </div>
-            </label>
-
-            <p class="forgotPs">Forgot Password</p>
-        </div>
-
-
-        <div class="footer">
-            <button class="btn">
-                Login
-            </button>
-
-            <span> - or - </span>
-
-            <div class="icons-container">
-                <div class="icons">
-                    <i class="fa-brands fa-google"></i>
-                    <i class="fa-brands fa-facebook"></i>
-                    <i class="fa-brands fa-apple"></i>
-                </div>
-                <p class="haveAcc">Don't have an account? <span>Sign up</span></p>
+        <form class="form-container">
+            <div class="header-container">
+                <h1 class="header">Login</h1>
             </div>
-        </div>
 
+            <div class="form">
+                <label class="form-input">
+                    <span class="floatingLabel">Email</span>
+
+                    <div class="input-container">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" placeholder="email@gmail.com"/>
+                    </div>
+                </label>
+                <label class="form-input">
+                    <span class="floatingLabel">Password</span>
+                    <div class="input-container">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" placeholder="Enter your password" id="input-password"/>
+                        <i class="fa-solid fa-eye-slash" id="eye-slash" style="cursor: pointer"></i>
+                    </div>
+                </label>
+
+                <p class="forgotPs">Forgot Password</p>
+            </div>
+
+
+            <div class="footer">
+                <button class="btn">
+                    Login
+                </button>
+
+                <span> - or - </span>
+
+                <div class="icons-container">
+                    <div class="icons">
+                        <i class="fa-brands fa-google" style="cursor: pointer"></i>
+                        <i class="fa-brands fa-facebook" style="cursor: pointer"></i>
+                        <i class="fa-brands fa-apple" style="cursor: pointer"></i>
+                    </div>
+                    <p class="haveAcc">Don't have an account? <span>Sign up</span></p>
+                </div>
+            </div>
+        </form>
     </div>
+
+    <script src="index.js"></script>
 </body>
 </html>

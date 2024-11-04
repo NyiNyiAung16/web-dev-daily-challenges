@@ -27,10 +27,6 @@ body {
     max-width: 350px;
     margin: 0 auto;
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
     background-color: var(--background-color);
 }
 
@@ -46,6 +42,15 @@ body {
     text-align: center;
     font-size: 4rem;
     color: #533924;
+}
+
+.form-container {
+    width: 100%;
+    min-height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .form {
@@ -70,6 +75,12 @@ body {
     border-radius: 30px;
 }
 
+.form .form-input:focus-within {
+    outline: none;
+    box-shadow: 0 0 5px var(--orange-color);
+    transition: box-shadow 0.2s;
+}
+
 .form .form-input .floatingLabel {
     position: absolute;
     top: -10px;
@@ -78,6 +89,16 @@ body {
     font-size: 15px;
     padding: 0 10px;
     background-color: var(--background-color);
+    transition: 0.2s ease;
+    pointer-events: none;
+}
+
+.form .form-input:focus-within .floatingLabel,
+.form .form-input input:not(:placeholder-shown) ~ .floatingLabel {
+    top: -10px;
+    left: 38px;
+    font-size: 13px;
+    color: var(--text-color);
 }
 
 .form .form-input .input-container {
@@ -124,7 +145,7 @@ body {
     gap: 15px 0;
 }
 
-.footer .btn {
+.btn {
     width: 100%;
     font-weight: 600;
     padding: 15px 20px;
@@ -133,6 +154,12 @@ body {
     background-color: var(--orange-color-light);
     color: var(--text-color);
     cursor: pointer;
+}
+
+.btn:hover{
+    background-color: var(--orange-color);
+    color: var(--orange-color-light);
+    transition: all .2s ease;
 }
 
 .footer span {
@@ -178,4 +205,25 @@ body {
     font-size: 15px;
     font-weight: 600;
     color: var(--orange-color);
+    cursor: pointer;
+}
+
+.footer .haveAcc span:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+
+    .header {
+        font-size: 5rem;
+    }
+
+    .form .form-input {
+        padding: 15px 30px;
+    }
+
+    .btn {
+        padding: 15px 30px;
+    }
 }
