@@ -1,0 +1,199 @@
+body {
+    font-family: sans-serif;
+    background-color: #e7e8ec;
+}
+
+:root {
+    --text-color-light: #b1b1b6;
+    --title-font-size: 20px;
+    --box-title-size: 16px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 460px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 26px;
+}
+
+.card .card-header {
+    padding-bottom: 26px;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--text-color-light);
+}
+
+.card .card-header .card-title h1{
+    margin: 0 0 5px 0;
+    font-size: var(--title-font-size);
+}
+
+.card .card-header .card-title h4{
+    margin: 0;
+    font-size: 16px;
+    font-weight: 200;
+    color: var(--text-color-light);
+}
+
+.card .card-header .close-btn svg {
+    cursor: pointer;
+    fill: var(--text-color-light);
+}
+
+.card .card-header .close-btn svg:hover {
+    fill: black;
+    transition: fill .3s ease;
+}
+
+.card .card-content {
+    padding-top: 26px;
+}
+
+.card .card-content h1 {
+    margin:0 0 15px 0;
+    font-size: var(--title-font-size);
+}
+
+.card .card-content .box-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.card .card-content .box-container .box {
+    display: flex;
+    align-items: start;
+    gap: 0 10px;
+    padding: 12px;
+    border: 2px solid var(--text-color-light);
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.card .card-content .box-container .box:hover,
+.card .card-content .box-container .active {
+    border-color: black;
+    transition: border-color .3s ease;
+}
+
+.card .card-content .box-container .box svg {
+    width: 50px;
+    height: 50px;
+    opacity: 0.6;
+}
+
+.card .card-footer .box-container .box svg {
+    opacity: 0.6;
+}
+
+.card .card-content .box-container .box:hover svg,
+.card .card-content .box-container .active svg,
+.card .card-footer .box-container .box:hover svg,
+.card .card-footer .box-container .active svg {
+    opacity: 1;
+    transition: opacity .3s ease;
+}
+
+.card .card-content .box-container .box:nth-child(1) svg {
+    fill: #4e45e3;
+}
+
+.card .card-content .box-container .box:nth-child(2) svg {
+    fill: #b390ed;
+}
+
+.card .card-content .box-container .box:nth-child(3) svg {
+    fill: #89b6f9;
+}
+
+.card .card-content .box-container .box:nth-child(4) svg {
+    fill: #f6d481;
+}
+
+.card .card-footer .box-container .box:nth-child(2) svg {
+    width: 24px;
+    height: 24px;
+    padding: 0;
+}
+
+.card .card-content .box-container .box h3 {
+    margin: 0 0 5px 0;
+    font-size: var(--box-title-size);
+    font-weight: 600;
+    color: var(--text-color-light);
+}
+
+.card .card-content .box-container .box:hover h3,
+.card .card-content .box-container .active h3 {
+    color: black;
+    transition: color .3s ease;
+}
+
+.card .card-content .box-container .box span {
+    font-size: 15px;
+    color: var(--text-color-light);
+}
+
+.card .card-content .box-container .box .check {
+    display: none;
+    max-width: 20px;
+    max-height: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.card .card-content .box-container .active .check {
+    display: block;
+    transition: display .3s ease;
+}
+
+.card .card-footer {
+    margin-top: 16px;
+}
+
+.card .card-footer h3 {
+    font-size: var(--title-font-size);
+}
+
+.card .card-footer .box-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px 0;
+}
+
+.card .card-footer .box-container .box {
+    display: flex;
+    align-items: center;
+    gap: 0 10px;
+    border: 2px solid var(--text-color-light);
+    padding: 14px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.card .card-footer .box-container .box:hover,
+.card .card-footer .box-container .active {
+    border-color: black;
+    transition: border-color .3s ease;
+}
+
+.card .card-footer .box-container .box h3 {
+    margin: 0;
+    font-size: var(--box-title-size);
+    color: var(--text-color-light);
+}
+
+.card .card-footer .box-container .box:hover h3,
+.card .card-footer .box-container .active h3 {
+    color: black;
+    transition: color .3s ease;
+}
