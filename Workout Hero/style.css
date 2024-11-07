@@ -1,0 +1,159 @@
+body {
+    min-height: 100vh;
+    background: linear-gradient(to right, #fff 80%, #222 20%);
+    margin: 0;
+    font-family: sans-serif, 'Arial';
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+nav .logo-brand {
+    display: flex;
+    align-items: center;
+    gap: 0 5px;
+}
+
+nav .links-container {
+    display: flex;
+    align-items: center;
+    gap: 0 26px;
+    list-style: none;
+    font-size: 1rem;
+}
+
+nav .links-container > * {
+    cursor: pointer;
+}
+
+nav .links-container li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav .links-container li:hover,
+nav .links-container li a:active {
+    transform: scale(1.1);
+    transition: transform .2s ease;
+}
+
+nav .join-now {
+    padding:10px;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.banner {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 50px;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+.banner h1 {
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.banner p {
+    font-size: 0.5rem;
+    letter-spacing: 1px;
+    color: #c3c3c3;
+}
+
+.banner .btn-container {
+    margin: 40px 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px 10px;
+}
+
+.banner .btn-container > button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.banner .btn-container button:nth-child(1) {
+    background-color: black;
+    color: #dadada;
+}
+
+.banner .btn-container button:nth-child(2) {
+    display: flex;
+    align-items: center;
+    gap: 0 5px;
+}
+
+.banner .btn-container button:hover:nth-child(1),
+.banner .btn-container button:hover:nth-child(2) {
+    opacity: 0.7;
+    transition: opacity .3s ease;
+}
+
+.banner .btn-container button:active:nth-child(1),
+.banner .btn-container button:active:nth-child(2) {
+    opacity: 1;
+    transition: opacity .3s ease;
+}
+
+.banner .image-container {
+    justify-self: end;
+    overflow: hidden;
+}
+
+.banner .image-container img {
+    max-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
+
+.banner .brands-logo {
+    display: flex;
+    align-items: center;
+    gap: 0 20px;
+}
+
+.banner .brands-logo > * {
+    cursor: pointer;
+}
+
+.banner .brands-logo > *:hover {
+    transform: scale(1.2);
+    transition: transform .3s ease;
+}
+
+
+
+@media (min-width: 640px) {
+    .banner h1 {
+        font-size: 2.4rem;
+    }
+
+    .banner p {
+        font-size: 0.8rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .banner h1 {
+        font-size: 3rem;
+    }
+
+    .banner p {
+        font-size: 1rem;
+    }
+}
